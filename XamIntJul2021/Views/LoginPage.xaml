@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<controls:BindedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamIntJul2021.Views.LoginPage"
+    xmlns:controls="clr-namespace:XamIntJul2021.AppBase.Controls"
+    xmlns:vm="clr-namespace:XamIntJul2021.ViewModels">
+
+    <controls:BindedPage.BindingContext>
+        <vm:LoginViewModel/>
+    </controls:BindedPage.BindingContext>
+
+    <Grid ColumnDefinitions="*,8*,1*" RowDefinitions="75,auto, auto, auto, auto, auto,auto">
+        <Label Grid.Column="1" Grid.Row="0" Text="Xamarin inteligente" Style="{StaticResource Header}"/>
+        <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="Center">Inicia tu sesion</Label>
+        <Label Grid.Column="1" Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,20">
+            <Label.Text>
+                Introduce los datos de acceso
+            </Label.Text>
+        </Label>
+
+        <Entry Grid.Column="1" Grid.Row="3" Text="{Binding UserName}" Placeholder="Usuario"/>
+        <Entry Grid.Column="1" Grid.Row="4" Text="{Binding Password}" Placeholder="Password" IsPassword="True"/>
+        <ActivityIndicator Grid.Column="1" Grid.Row="5" IsRunning="{Binding IsBusy}" IsVisible="True"></ActivityIndicator>
+        <Button Grid.Column="1" Grid.Row="6" Text="Iniciar sesion"/>
+    </Grid>
+
+</controls:BindedPage>

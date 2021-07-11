@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamIntJul2021.App">
+    <Application.Resources>
+        <Color x:Key="MainColor">#09134C</Color>
+        <Color x:Key="DarkColor">#0F110C</Color>
+        <Color x:Key="LightColor">#CECCCC</Color>
+        <Color x:Key="ErrorColor">#9C0D38</Color>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource MainColor}"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="BorderColor" Value="Black"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="Header">
+            <Setter Property="FontSize" Value="Header"/>
+            <Setter Property="TextColor" Value="{StaticResource ErrorColor}"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
